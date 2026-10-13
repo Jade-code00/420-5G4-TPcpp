@@ -185,13 +185,36 @@ CMakeFiles/bibliotheque.dir/filemanager.cpp.o: \
  /usr/include/c++/14/bits/unique_ptr.h \
  /usr/include/c++/14/ext/aligned_buffer.h \
  /usr/include/c++/14/bits/fs_dir.h /usr/include/c++/14/bits/fs_ops.h \
+ /usr/include/c++/14/regex /usr/include/c++/14/bitset \
+ /usr/include/c++/14/stack /usr/include/c++/14/deque \
+ /usr/include/c++/14/bits/stl_uninitialized.h \
+ /usr/include/c++/14/bits/stl_deque.h /usr/include/c++/14/bits/deque.tcc \
+ /usr/include/c++/14/bits/stl_stack.h \
+ /usr/include/c++/14/bits/std_function.h \
+ /usr/include/c++/14/bits/stl_algo.h \
+ /usr/include/c++/14/bits/algorithmfwd.h \
+ /usr/include/c++/14/bits/stl_heap.h \
+ /usr/include/c++/14/bits/uniform_int_dist.h \
+ /usr/include/c++/14/bits/stl_tempbuf.h \
+ /usr/include/c++/14/bits/stl_tree.h \
+ /usr/include/c++/14/bits/node_handle.h \
+ /usr/include/c++/14/bits/stl_map.h /usr/include/c++/14/bits/stl_vector.h \
+ /usr/include/c++/14/bits/stl_bvector.h \
+ /usr/include/c++/14/bits/vector.tcc \
+ /usr/include/c++/14/bits/regex_constants.h \
+ /usr/include/c++/14/bits/regex_error.h \
+ /usr/include/c++/14/bits/regex_automaton.h \
+ /usr/include/c++/14/bits/regex_automaton.tcc \
+ /usr/include/c++/14/bits/regex_scanner.h \
+ /usr/include/c++/14/bits/regex_scanner.tcc \
+ /usr/include/c++/14/bits/regex_compiler.h \
+ /usr/include/c++/14/bits/regex_compiler.tcc \
+ /usr/include/c++/14/bits/regex.h /usr/include/c++/14/bits/regex.tcc \
+ /usr/include/c++/14/bits/regex_executor.h \
+ /usr/include/c++/14/bits/regex_executor.tcc \
  /workspaces/420-5G4-TPcpp/filemanager.h \
  /workspaces/420-5G4-TPcpp/library.h /usr/include/c++/14/vector \
- /usr/include/c++/14/bits/stl_uninitialized.h \
- /usr/include/c++/14/bits/stl_vector.h \
- /usr/include/c++/14/bits/stl_bvector.h \
- /usr/include/c++/14/bits/vector.tcc /usr/include/c++/14/memory \
- /usr/include/c++/14/bits/stl_tempbuf.h \
+ /usr/include/c++/14/memory \
  /usr/include/c++/14/bits/stl_raw_storage_iter.h \
  /usr/include/c++/14/bits/align.h \
  /usr/include/c++/14/bits/shared_ptr_atomic.h \

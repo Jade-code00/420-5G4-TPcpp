@@ -1,6 +1,8 @@
 #include <fstream>
 #include <iostream>
 #include <filesystem>
+#include <regex>
+
 #include "filemanager.h"
 
 using namespace std;
@@ -100,6 +102,26 @@ bool FileManager::loadUsersFromFile(Library& library) {
     
     file.close();
     cout << "Chargé " << count << " utilisateur(s) depuis le fichier.\n";
+
+    // === Mettre à jour le compteur d'ID utilisateur ===
+    int maxId = 0;
+    regex idPattern("USR(\\d+)");
+    smatch match;
+
+    auto usersList = library.getAllUsers();
+    for (User* u : usersList) {
+        string id = u->getUserId();
+        if (regex_search(id, match, idPattern)) {
+            int idNum = stoi(match[1]);
+            if (idNum > maxId) maxId = idNum;
+        }
+    }
+
+    // Initialise le compteur global
+    User::setUserCount(maxId);
+    cout << "Dernier ID détecté : USR" << maxId << endl;
+
+
     return true;
 }
 

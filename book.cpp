@@ -65,3 +65,4 @@ void Book::fromFileFormat(const string& line) {
     getline(ss, borrowerId, '|');
     
     isAvailable = (availableStr == "1" || availableStr == "true");
+}

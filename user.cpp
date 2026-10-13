@@ -1,12 +1,23 @@
 #include <sstream>
 #include <algorithm>
-
+#include <iomanip>
 #include "user.h"
 
 using namespace std;
 
+int User::userCount = 0; // Initialize static member
+
 // Default constructor
 User::User() : name(""), userId("") {}
+
+User::User(const string& name) : name(name) {
+    userCount++;
+
+    stringstream ss;
+    ss << "USR" << setw(3) << setfill('0') << userCount;
+    
+    userId = ss.str();
+}
 
 // Parameterized constructor
 User::User(const string& name, const string& userId) 
@@ -15,11 +26,13 @@ User::User(const string& name, const string& userId)
 // Getters
 string User::getName() const { return name; }
 string User::getUserId() const { return userId; }
+int User::getUserCount() { return userCount; }
 vector<string> User::getBorrowedBooks() const { return borrowedBooks; }
 
 // Setters
 void User::setName(const string& name) { this->name = name; }
 void User::setUserId(const string& userId) { this->userId = userId; }
+void User::setUserCount(int count) { userCount = count; }
 
 // Borrow a book
 void User::borrowBook(const string& isbn) {

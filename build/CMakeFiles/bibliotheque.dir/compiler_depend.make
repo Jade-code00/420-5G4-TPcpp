@@ -50,6 +50,7 @@ CMakeFiles/bibliotheque.dir/book.cpp.o: /workspaces/420-5G4-TPcpp/book.cpp \
   /usr/include/c++/14/bits/range_access.h \
   /usr/include/c++/14/bits/refwrap.h \
   /usr/include/c++/14/bits/requires_hosted.h \
+  /usr/include/c++/14/bits/sstream.tcc \
   /usr/include/c++/14/bits/std_abs.h \
   /usr/include/c++/14/bits/stl_algobase.h \
   /usr/include/c++/14/bits/stl_construct.h \
@@ -91,6 +92,7 @@ CMakeFiles/bibliotheque.dir/book.cpp.o: /workspaces/420-5G4-TPcpp/book.cpp \
   /usr/include/c++/14/new \
   /usr/include/c++/14/ostream \
   /usr/include/c++/14/pstl/pstl_config.h \
+  /usr/include/c++/14/sstream \
   /usr/include/c++/14/stdexcept \
   /usr/include/c++/14/streambuf \
   /usr/include/c++/14/string \
@@ -970,6 +972,7 @@ CMakeFiles/bibliotheque.dir/user.cpp.o: /workspaces/420-5G4-TPcpp/user.cpp \
   /usr/include/c++/14/bits/basic_string.tcc \
   /usr/include/c++/14/bits/char_traits.h \
   /usr/include/c++/14/bits/charconv.h \
+  /usr/include/c++/14/bits/codecvt.h \
   /usr/include/c++/14/bits/concept_check.h \
   /usr/include/c++/14/bits/cpp_type_traits.h \
   /usr/include/c++/14/bits/cxxabi_forced.h \
@@ -985,8 +988,11 @@ CMakeFiles/bibliotheque.dir/user.cpp.o: /workspaces/420-5G4-TPcpp/user.cpp \
   /usr/include/c++/14/bits/istream.tcc \
   /usr/include/c++/14/bits/locale_classes.h \
   /usr/include/c++/14/bits/locale_classes.tcc \
+  /usr/include/c++/14/bits/locale_conv.h \
   /usr/include/c++/14/bits/locale_facets.h \
   /usr/include/c++/14/bits/locale_facets.tcc \
+  /usr/include/c++/14/bits/locale_facets_nonio.h \
+  /usr/include/c++/14/bits/locale_facets_nonio.tcc \
   /usr/include/c++/14/bits/localefwd.h \
   /usr/include/c++/14/bits/memory_resource.h \
   /usr/include/c++/14/bits/memoryfwd.h \
@@ -998,6 +1004,7 @@ CMakeFiles/bibliotheque.dir/user.cpp.o: /workspaces/420-5G4-TPcpp/user.cpp \
   /usr/include/c++/14/bits/postypes.h \
   /usr/include/c++/14/bits/predefined_ops.h \
   /usr/include/c++/14/bits/ptr_traits.h \
+  /usr/include/c++/14/bits/quoted_string.h \
   /usr/include/c++/14/bits/range_access.h \
   /usr/include/c++/14/bits/refwrap.h \
   /usr/include/c++/14/bits/requires_hosted.h \
@@ -1033,6 +1040,7 @@ CMakeFiles/bibliotheque.dir/user.cpp.o: /workspaces/420-5G4-TPcpp/user.cpp \
   /usr/include/c++/14/cstddef \
   /usr/include/c++/14/cstdio \
   /usr/include/c++/14/cstdlib \
+  /usr/include/c++/14/ctime \
   /usr/include/c++/14/cwchar \
   /usr/include/c++/14/cwctype \
   /usr/include/c++/14/debug/assertions.h \
@@ -1044,9 +1052,11 @@ CMakeFiles/bibliotheque.dir/user.cpp.o: /workspaces/420-5G4-TPcpp/user.cpp \
   /usr/include/c++/14/ext/string_conversions.h \
   /usr/include/c++/14/ext/type_traits.h \
   /usr/include/c++/14/initializer_list \
+  /usr/include/c++/14/iomanip \
   /usr/include/c++/14/ios \
   /usr/include/c++/14/iosfwd \
   /usr/include/c++/14/istream \
+  /usr/include/c++/14/locale \
   /usr/include/c++/14/new \
   /usr/include/c++/14/ostream \
   /usr/include/c++/14/pstl/execution_defs.h \
@@ -1067,6 +1077,7 @@ CMakeFiles/bibliotheque.dir/user.cpp.o: /workspaces/420-5G4-TPcpp/user.cpp \
   /usr/include/errno.h \
   /usr/include/features-time64.h \
   /usr/include/features.h \
+  /usr/include/libintl.h \
   /usr/include/linux/errno.h \
   /usr/include/linux/posix_types.h \
   /usr/include/linux/sched/types.h \
@@ -1150,7 +1161,9 @@ CMakeFiles/bibliotheque.dir/user.cpp.o: /workspaces/420-5G4-TPcpp/user.cpp \
   /usr/include/x86_64-linux-gnu/c++/14/bits/error_constants.h \
   /usr/include/x86_64-linux-gnu/c++/14/bits/gthr-default.h \
   /usr/include/x86_64-linux-gnu/c++/14/bits/gthr.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/messages_members.h \
   /usr/include/x86_64-linux-gnu/c++/14/bits/os_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/14/bits/time_members.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
   /usr/include/x86_64-linux-gnu/sys/cdefs.h \
@@ -1275,6 +1288,10 @@ CMakeFiles/bibliotheque.dir/filemanager.cpp.o:
 
 /usr/include/c++/14/cwchar:
 
+/usr/include/c++/14/bits/stl_algo.h:
+
+/usr/include/c++/14/sstream:
+
 /usr/include/c++/14/bits/std_abs.h:
 
 /usr/include/linux/sched/types.h:
@@ -1315,8 +1332,6 @@ CMakeFiles/bibliotheque.dir/filemanager.cpp.o:
 
 /usr/include/c++/14/cstddef:
 
-/usr/include/x86_64-linux-gnu/bits/locale.h:
-
 /usr/include/c++/14/debug/debug.h:
 
 /usr/include/c++/14/bits/version.h:
@@ -1327,11 +1342,17 @@ CMakeFiles/bibliotheque.dir/filemanager.cpp.o:
 
 /usr/include/c++/14/bits/uses_allocator_args.h:
 
+/usr/include/c++/14/tuple:
+
+/usr/include/c++/14/bits/streambuf_iterator.h:
+
 /usr/include/stdc-predef.h:
 
 /usr/include/asm-generic/posix_types.h:
 
 /usr/include/c++/14/bits/invoke.h:
+
+/usr/include/x86_64-linux-gnu/bits/locale.h:
 
 /usr/include/c++/14/concepts:
 
@@ -1417,10 +1438,6 @@ CMakeFiles/bibliotheque.dir/book.cpp.o:
 
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
-/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
-
-/usr/include/c++/14/bits/fs_fwd.h:
-
 /usr/include/c++/14/cstdio:
 
 /usr/include/c++/14/bits/utility.h:
@@ -1481,6 +1498,8 @@ CMakeFiles/bibliotheque.dir/book.cpp.o:
 
 /usr/include/c++/14/bits/uses_allocator.h:
 
+/usr/include/c++/14/bits/sstream.tcc:
+
 /usr/include/x86_64-linux-gnu/bits/endianness.h:
 
 /usr/include/c++/14/bits/stl_uninitialized.h:
@@ -1499,10 +1518,6 @@ CMakeFiles/bibliotheque.dir/book.cpp.o:
 
 /usr/include/c++/14/bits/range_access.h:
 
-/usr/include/c++/14/tuple:
-
-/usr/include/c++/14/bits/streambuf_iterator.h:
-
 /usr/include/c++/14/bits/refwrap.h:
 
 /usr/include/c++/14/bits/stl_iterator_base_types.h:
@@ -1510,6 +1525,10 @@ CMakeFiles/bibliotheque.dir/book.cpp.o:
 /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/wchar.h:
+
+/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
+
+/usr/include/c++/14/bits/fs_fwd.h:
 
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
 
@@ -1699,8 +1718,6 @@ CMakeFiles/bibliotheque.dir/main.cpp.o:
 
 /usr/include/c++/14/bits/quoted_string.h:
 
-/usr/include/c++/14/bits/sstream.tcc:
-
 /usr/include/c++/14/bits/new_allocator.h:
 
 /usr/include/c++/14/bits/stl_bvector.h:
@@ -1752,10 +1769,6 @@ CMakeFiles/bibliotheque.dir/main.cpp.o:
 /usr/include/x86_64-linux-gnu/bits/sched.h:
 
 /usr/include/c++/14/ratio:
-
-/usr/include/c++/14/bits/stl_algo.h:
-
-/usr/include/c++/14/sstream:
 
 /usr/include/x86_64-linux-gnu/c++/14/bits/c++io.h:
 

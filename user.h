@@ -11,10 +11,12 @@ private:
     string name;
     string userId;
     vector<string> borrowedBooks; // Store ISBNs of borrowed books
+    static int userCount; // compteur global pour générer les IDs
 
 public:
     // Constructors
     User();
+    User(const string& name); // constructeur qui génère automatiquement un ID unique
     User(const string& name, const string& userId);
     
     // Getters
@@ -25,6 +27,8 @@ public:
     // Setters
     void setName(const string& name);
     void setUserId(const string& userId);
+    static void setUserCount(int count);
+    static int getUserCount();
     
     // Methods
     void borrowBook(const string& isbn);
