@@ -18,19 +18,11 @@ bool Book::getAvailability() const { return isAvailable; }
 string Book::getBorrowerId() const { return borrowerId; }
 
 // Setters
-void Book::setTitle(const string& t) { title = t; }
-void Book::setAuthor(const string& a) { author = a; }
-void Book::setISBN(const string& i) { isbn = i; }
-void Book::setAvailability(bool available) { isAvailable = available; }
-void Book::setBorrowerId(const string& id) { borrowerId = id; }
-
-// Convertit un livre en ligne de texte pour sauvegarde
-string Book::toFileFormat() const {
-    // Format : titre|auteur|isbn|disponible|borrowerId
-    stringstream ss;
-    ss << title << "|" << author << "|" << isbn << "|" << isAvailable << "|" << borrowerId;
-    return ss.str();
-}
+void Book::setTitle(const string& title) { this->title = title; }
+void Book::setAuthor(const string& author) { this->author = author; }
+void Book::setISBN(const string& isbn) { this->isbn = isbn; }
+void Book::setAvailability(bool available) { this->isAvailable = available; }
+void Book::setBorrowerId(const string& id) { this->borrowerId = id; }
 
 // Méthodes
 void Book::checkOut(const string& borrowerId) {
@@ -42,23 +34,34 @@ void Book::checkOut(const string& borrowerId) {
     }
 }
 
-// Reconstruit un livre à partir d'une ligne de texte
-void Book::fromFileFormat(const string& line) {
-    stringstream ss(line);
-    getline(ss, title, '|');
-    getline(ss, author, '|');
-    getline(ss, isbn, '|');
-    string availableStr;
-    getline(ss, availableStr, '|');
-    isAvailable = (availableStr == "1" || availableStr == "true");
-    getline(ss, borrowerId, '|');
-}
-
 void Book::returnBook() {
     isAvailable = true;
     borrowerId = "";
 }
 
 string Book::toString() const {
-    return title + " | " + author + " | " + isbn + (isAvailable ? " | Disponible" : " | Emprunté");
+    return title + " | " + author + " | " + isbn + 
+            (isAvailable ? " | Disponible" : " | Emprunté par" + borrowerId);
 }
+
+
+// Sauvegarde / chargement
+string Book::toFileFormat() const {
+    // Format : title|author|isbn|isAvailable|borrowerId
+    stringstream ss;
+    ss << title << "|" << author << "|" << isbn << "|" 
+        << isAvailable << "|" << borrowerId;
+    return ss.str();
+}
+
+void Book::fromFileFormat(const string& line) {
+    stringstream ss(line);
+    string availableStr;
+
+    getline(ss, title, '|');
+    getline(ss, author, '|');
+    getline(ss, isbn, '|');
+    getline(ss, availableStr, '|');
+    getline(ss, borrowerId, '|');
+    
+    isAvailable = (availableStr == "1" || availableStr == "true");
