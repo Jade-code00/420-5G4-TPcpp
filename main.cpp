@@ -33,6 +33,8 @@ void displayMenu() {
     cout << "11. Statistiques de la Bibliothèque\n";
     cout << "12. Sauvegarder les Données\n";
     cout << "13. Créer une Sauvegarde\n";
+    cout << "14. Trier les Livres par Titre\n";
+    cout << "15. Trier les Livres par Auteur\n";
     cout << "0.  Quitter\n";
     cout << "======================================================\n";
     cout << "Entrez votre choix : ";
@@ -248,7 +250,23 @@ int main(int argc, char* argv[]) {
                 pauseForInput();
                 break;
             }
+
+            case 14: { // Sort Books by Title
+                library.sortBooksByTitle();
+                library.displayAllBooks();
+                cout << "Livres triés par titre avec succès !\n";
+                pauseForInput();
+                break;
+            }
             
+            case 15: { // Sort Books by Author
+                library.sortBooksByAuthor();
+                library.displayAllBooks();
+                cout << "Livres triés par auteur avec succès !\n";
+                pauseForInput();
+                break;
+            }
+
             case 0: // Exit
                 cout << "Sauvegarde des données avant la fermeture...\n";
                 fileManager.saveLibraryData(library);

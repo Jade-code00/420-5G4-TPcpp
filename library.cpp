@@ -13,6 +13,22 @@ void Library::addBook(const Book& book) {
     books.push_back(make_unique<Book>(book));
 }
 
+//tri par titre
+void Library::sortBooksByTitle() {
+    sort(books.begin(), books.end(),
+        [](const unique_ptr<Book>& a, const unique_ptr<Book>& b) {
+            return a->getTitle() < b->getTitle();
+        });
+}
+
+//tri par auteur
+void Library::sortBooksByAuthor() {
+    sort(books.begin(), books.end(),
+         [](const unique_ptr<Book>& a, const unique_ptr<Book>& b) {
+             return a->getAuthor() < b->getAuthor();
+         });
+}
+
 // Remove book from library
 bool Library::removeBook(const string& isbn) {
     auto it = find_if(books.begin(), books.end(),
