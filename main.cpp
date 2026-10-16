@@ -284,7 +284,18 @@ int main(int argc, char* argv[]) {
 
             case 0: // Exit
                 cout << "Sauvegarde des données avant la fermeture...\n";
-                fileManager.saveLibraryData(library);
+                
+                // Vérifie que les chemins ne sont pas vides
+                if (!booksFile.empty() && !usersFile.empty()) {
+                    if (fileManager.saveLibraryData(library)) {
+                        cout << "Données sauvegardées avec succès.\n";
+                    } else {
+                        cout << "Erreur lors de la sauvegarde des données.\n";
+                    }
+                } else {
+                    cout << "Aucune sauvegarde effectuée : répertoire de données non spécifié.\n";
+                }
+
                 cout << "Merci d'avoir utilisé le Système de Gestion de Bibliothèque Personnelle !\n";
                 running = false;
                 break;
