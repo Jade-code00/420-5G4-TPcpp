@@ -1,0 +1,4 @@
+2026-10-15 23:55:23 - [ AJOUT LIVRE ] Le petit prince|antoine|678||1|
+2026-10-15 23:56:33 - [ AJOUT UTILISATEUR ] Jade|USR027
+2026-10-15 23:57:41 - [ EMPRUNT ] Le petit prince|antoine|678|0|USR027
+2026-10-15 23:57:48 - [ RETOUR ] Le petit prince|antoine|678|1|

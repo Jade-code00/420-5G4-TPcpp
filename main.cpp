@@ -115,6 +115,7 @@ int main(int argc, char* argv[]) {
                 } else {
                     Book newBook(title, author, isbn);
                     library.addBook(newBook);
+                    fileManager.logActivity("AJOUT LIVRE", title + "|" + author + "|" + isbn + "|" + "1|");
                     cout << "Livre ajouté avec succès !\n";
                 }
                 pauseForInput();
@@ -125,6 +126,7 @@ int main(int argc, char* argv[]) {
                 string isbn = getInput("Entrez l'ISBN du livre à supprimer : ");
                 
                 if (library.removeBook(isbn)) {
+                    fileManager.logActivity("SUPPRESSION LIVRE", isbn);
                     cout << "Livre supprimé avec succès !\n";
                 } else {
                     cout << "Livre non trouvé.\n";
@@ -187,6 +189,8 @@ int main(int argc, char* argv[]) {
 
                 library.addUser(newUser);
 
+                fileManager.logActivity("AJOUT UTILISATEUR", newUser.getName() + "|" + newUser.getUserId());
+
                 cout << "Utilisateur ajouté avec succès !" << endl;
                 cout << "Nom : " << newUser.getName() << endl;
                 cout << "ID : " << newUser.getUserId() << endl;
@@ -205,6 +209,9 @@ int main(int argc, char* argv[]) {
                 string userId = getInput("Entrez l'ID de l'utilisateur : ");
                 
                 if (library.checkOutBook(isbn, userId)) {
+                    Book* book = library.findBookByISBN(isbn);
+                    User* user = library.findUserById(userId);
+                    fileManager.logActivity("EMPRUNT", book->getTitle() + "|"+ book->getAuthor() + "|" + book->getISBN() + "|0|" + user->getUserId());                    
                     cout << "Livre emprunté avec succès !\n";
                 } else {
                     cout << "Erreur : Impossible d'emprunter le livre. Vérifiez l'ISBN, l'ID utilisateur et la disponibilité du livre.\n";
@@ -217,6 +224,14 @@ int main(int argc, char* argv[]) {
                 string isbn = getInput("Entrez l'ISBN du livre à retourner : ");
                 
                 if (library.returnBook(isbn)) {
+                    Book* book = library.findBookByISBN(isbn);
+                    fileManager.logActivity(
+                        "RETOUR",
+                        book->getTitle() + "|" +
+                        book->getAuthor() + "|" +
+                        book->getISBN() + "|1|"
+                    );
+
                     cout << "Livre retourné avec succès !\n";
                 } else {
                     cout << "Erreur : Impossible de retourner le livre. Vérifiez l'ISBN et que le livre est bien emprunté.\n";
@@ -278,7 +293,8 @@ int main(int argc, char* argv[]) {
                 cout << "Choix invalide. Veuillez réessayer.\n";
                 pauseForInput();
                 break;
-        }
+        }        
+        
     }
     
     return 0;
